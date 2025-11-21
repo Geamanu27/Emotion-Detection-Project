@@ -1,0 +1,151 @@
+% =========================
+% Ethical Considerations for Emotion Detection (working version)
+% =========================
+\documentclass[11pt,a4paper]{article}
+
+% ---- Basics & layout
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{parskip}         
+\usepackage{setspace}        
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{url}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue!60!black,
+  citecolor=black,
+  pdfauthor={David Geamanu},
+  pdftitle={Ethical Considerations in Emotion Detection Using AI}
+}
+\usepackage{fancyhdr}
+
+% ---- Header / Footer
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Ethical Considerations — Emotion Detection}
+\rhead{\thepage}
+
+% ---- Title formatting
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+% ---- Project metadata
+\newcommand{\ProjectTitle}{Emotion Detection Using AI (MobileNet + Transfer Learning)}
+\newcommand{\AuthorName}{David Geamanu}
+\newcommand{\StudentID}{5052238}
+\newcommand{\Institution}{Fontys University of Applied Sciences}
+\newcommand{\Course}{Minor: AI Systems}
+\newcommand{\Coach}{Frank van Gennip}
+\newcommand{\Version}{v1.1}
+\newcommand{\DateIssued}{\today}
+
+% ---- Compact lists
+\setlist[itemize]{topsep=3pt,itemsep=2pt,parsep=0pt,leftmargin=14pt}
+\setlist[enumerate]{topsep=3pt,itemsep=2pt,parsep=0pt,leftmargin=16pt}
+
+\begin{document}
+
+% ====== Cover
+\begin{titlepage}
+  \centering
+  {\Large \Institution\par}
+  \vspace{1cm}
+  {\huge \textbf{Ethical Considerations in Emotion Detection Using AI}\par}
+  \vspace{0.4cm}
+  {\large \ProjectTitle\par}
+  \vspace{1.2cm}
+  \begin{tabular}{@{}ll@{}}
+    \textbf{Author:}     & \AuthorName \\
+    \textbf{Student ID:} & \StudentID \\
+    \textbf{Course:}     & \Course \\
+    \textbf{Coach:} & \Coach \\
+    \textbf{Version:}    & \Version \\
+    \textbf{Date:}       & \DateIssued \\
+  \end{tabular}
+  \vfill
+  {\small This document outlines the ethical, legal, and social implications considered during the design and development of the project, referencing GDPR [1], the EU AI Act [2], and IEEE Ethically Aligned Design [3].}
+\end{titlepage}
+
+% ====== Executive Summary
+\section*{Executive Summary}
+This statement summarizes how the project addresses privacy, consent, fairness, data security, ethical scope, and compliance. The system prioritizes on-device processing, explicit user control, and transparent communication. Risks are identified and mitigations are defined, aligning with GDPR principles [1] and current EU AI guidance [2].
+
+\section{Introduction}
+This document describes the ethical considerations for an emotion detection prototype that processes camera input to infer facial expressions. The goal is to ensure the design remains privacy-preserving, fair, transparent, and compliant with applicable regulations. The application is intended for research and educational purposes (e.g., wellbeing feedback), not surveillance or profiling, in line with principles of accountability and human agency stated in IEEE Ethically Aligned Design [3].
+
+\section{1. Privacy and Data Protection}
+Facial data constitutes sensitive biometric information. To minimize risk, the project follows data minimization and purpose limitation, as required by the GDPR [1]. 
+\begin{itemize}
+  \item \textbf{Local processing:} All inference is performed on-device; no raw images or identifiers are transmitted.
+  \item \textbf{No permanent storage:} By default, images/frames are processed in memory only. Any diagnostic logging excludes personal data.
+  \item \textbf{Data deletion:} Temporary buffers are cleared immediately after inference.
+\end{itemize}
+
+\section{2. User Consent and Transparency}
+The application implements explicit, informed consent in compliance with Article 6(1)(a) of the GDPR [1].
+\begin{itemize}
+  \item \textbf{Opt-in:} Camera access and emotion inference are disabled until the user enables them.
+  \item \textbf{Just-in-time notices:} A short notice explains what is processed, for what purpose, and for how long.
+  \item \textbf{Controls:} Clear on/off toggle, session indicator (e.g., icon/LED), and a link to the privacy summary.
+\end{itemize}
+
+\section{3. Data Storage and Security}
+If short-term storage is required for evaluation, the design follows the principles of integrity and confidentiality from Article 5 of the GDPR [1] and ISO-style information security best practices.
+\begin{itemize}
+  \item \textbf{Scope:} Store only what is strictly necessary (e.g., aggregated metrics).
+  \item \textbf{Protection:} Encrypt at rest; restrict access to authorized personnel.
+  \item \textbf{Retention:} Define retention windows and automatic deletion schedules.
+\end{itemize}
+
+\newpage
+
+\section{4. AI Bias and Fairness}
+The model may inherit bias from training data, which is addressed in line with the fairness principles of the EU AI Act [2]. Mitigations include:
+\begin{itemize}
+  \item Inspecting class distribution and augmenting underrepresented classes.
+  \item Reporting class-wise metrics and confusion matrices.
+  \item Avoiding high-stakes use; keeping predictions informational, not determinative.
+\end{itemize}
+
+\section{5. Ethical Use and Context}
+The main goal of this project is to use emotion detection in a positive and helpful way, such as reminding users to take breaks or encouraging them when they show positive emotions. The system is not made for surveillance, profiling, or influencing people’s behaviour. All demonstrations and tests clearly explain the purpose of the system to anyone involved. Users have full control over when the application is active and can pause or stop it at any time. Any future version of the app will show a clear indicator when the camera is on and will include a short, easy-to-understand privacy explanation. By setting clear limits and responsible uses, the project aims to keep emotion detection ethical and focused on helping people, consistent with the IEEE’s principles of human wellbeing and accountability [3].
+
+\section{6. Regulatory Alignment}
+The project aligns with key European data-protection and AI-ethics frameworks, including the General Data Protection Regulation (GDPR) [1] and the upcoming EU AI Act [2]. Under GDPR, it respects all major principles: lawfulness, fairness, transparency, purpose limitation, data minimisation, and integrity/confidentiality. The design treats all facial analysis as sensitive processing and ensures that it stays within a low-risk category by design—local processing, explicit user consent, and transparent operation. In terms of governance, documentation is maintained for the model’s purpose, assumptions, and limitations to promote accountability. The project also draws on the IEEE Ethically Aligned Design framework [3], focusing on human agency, accountability, and the promotion of wellbeing. Together, these measures ensure that the prototype not only complies with current legal requirements but also anticipates future standards for trustworthy and responsible AI systems.
+
+\section{Risk \& Mitigation Summary}
+\begin{table}[h!]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}lXlX@{}}
+\toprule
+\textbf{Risk} & \textbf{Description} & \textbf{Likelihood} & \textbf{Mitigation} \\
+\midrule
+Privacy leakage & Unintended storage/transmission of frames & Low & On-device processing, no raw logs, code review \\
+Bias & Uneven accuracy across groups/classes & Medium & Class-balance checks, per-class metrics, iterative tuning \\
+Misuse & Use for surveillance without consent & Low/Med & Usage policy, UI indicators, opt-in only \\
+Security & Unauthorized access to temp data & Low & Encryption, least-privilege access, short retention \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\section{Conclusion}
+With local processing, explicit consent, limited storage, fairness checks, and clear scope limits, the prototype adheres to responsible AI practices and prepares for compliant, user-respecting experimentation. This approach demonstrates alignment with the ethical frameworks of GDPR [1], the EU AI Act [2], and IEEE Ethically Aligned Design [3].
+
+% ====== References
+\section*{References}
+\begin{enumerate}
+  \item European Parliament and Council. \textit{General Data Protection Regulation (EU) 2016/679}. Available at: \url{https://eur-lex.europa.eu/eli/reg/2016/679/oj}
+  \item European Commission. \textit{Proposal for a Regulation Laying Down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act)}. COM(2021) 206 final. Available at: \url{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206}
+  \item IEEE. \textit{Ethically Aligned Design: A Vision for Prioritizing Human Well-being with Autonomous and Intelligent Systems, First Edition}. IEEE Standards Association, 2019. Available at: \url{https://ethicsinaction.ieee.org/}
+\end{enumerate}
+
+\end{document}

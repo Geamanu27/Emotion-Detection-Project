@@ -1,0 +1,217 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{graphicx}
+\usepackage{enumitem} % For custom list formatting
+
+
+
+
+\geometry{margin=1in}
+\setstretch{1.15}
+
+% Heading formats
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+% TOC depth: include subsections
+\setcounter{tocdepth}{2}
+
+% Dotted leaders in ToC
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+
+\begin{document}
+
+% ----------------------
+% Cover Page (no page number)
+% ----------------------
+\pagenumbering{gobble}
+\begin{titlepage}
+  \centering
+  \vspace*{3cm}
+  {\LARGE\bfseries Portfolio - Individual\par}
+  \vspace{0.8cm}
+  {\Large AI-Systems Minor\par}
+  \vspace{2.5cm}
+  {\Large Geamanu David - 5052238\par}
+  \vspace{0.8cm}
+  {\large Fontys Venlo University of Applied Sciences\par}
+  \vspace{0.8cm}
+  {\large 2025\par}
+  \vfill
+\end{titlepage}
+\clearpage
+
+% ----------------------
+% Functional Table of Contents (roman numerals)
+% ----------------------
+\pagenumbering{roman}
+\setcounter{page}{1}
+\tableofcontents
+\clearpage
+
+% ----------------------
+% Main matter (arabic numerals)
+% ----------------------
+\pagenumbering{arabic}
+
+% 1. Student Profile
+\section{Student Profile}
+% TODO: Add content for Student Profile.
+My passion for technology started loong before I began my studies at Fontys University of Applied Sciences. From assembling computers to troubleshooting them, I was always trying to learn more and more about how computers work. This curiosity rapidly turned into a broader interest in the digital world and the many possibilities it offers. Once I joined this university, I discovered a whole new dimension of computing: the field of artificial intelligence and data mining. What I found most interesting is how giving the computer a dataset, with some proper training, we can see all sorts of predictions and correlations, most of the time them being accurate. \\
+In the past years, artificial intelligence has gained significant traction and attention from people who have integrated it into their daily routine, from using it to get a recipe for a quick meal to helping them in school assignments. But one task that AI has made considerably easier, is working with large amounts of data. In the past we would have to manually look over the data, analize and recognise patterns and then after come up with a conclusion. This all changed when the process became automated. For this reason, I decided to make use of this technology to come up with an application that can analyze a person's face and detect what is his mood based on facial expression. I think this application could have an impact across multiple domains, such as well-being monitoring, online recommendation systems and online learning.
+
+
+
+\subsection{Self reflection}
+During my studies at Fontys University, I've studied many topics which focus on programming, algorithms and data structures. During the 4th semester, I discovered a course that captivated my full attention from the first lesson, that being Data Mining. We discussed many topics like how we should handle large sets of data, many different regression models and neural networks. In this course we also had to do weekly assignments. My favorite one was an exercise where we had to predict house prices based on some features such as number of rooms, square feet and if it has a garade or not using a suited regression model. This couse sparked my curiosity in this domain and thats why I chose this minor.
+\newpage
+\subsection{SWOT Analysis}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/SWOT.png}
+    \caption{SWOT Analysis}
+    \label{fig:SWOT}
+\end{figure}
+\subsection*{Strengths}
+The project builds on my personal motivation and curiosity for AI, giving me a strong drive to complete it successfully. It also offers a hands-on learning experience where I can apply my technical knowledge in a practical context. My growing foundation in machine learning and computer vision supports the technical development of the model.
+
+\subsection*{Weaknesses}
+Because I am still gaining experience in AI and computer vision, the project comes with a learning curve. The implementation can be complex, and limited time or computing resources may slow progress. Managing these aspects effectively will be essential to stay on schedule and maintain project quality.
+
+\subsection*{Opportunities}
+This project allows me to explore a field with real-world applications, from well-being monitoring to adaptive learning systems. It provides the opportunity to strengthen my technical skills, learn new tools, and create something that can be showcased in my professional portfolio.
+
+\subsection*{Threats}
+Potential risks include ethical concerns related to privacy and fairness, as well as the possibility of model bias if the dataset lacks diversity. Technical limitations such as lighting, camera quality, or real-time performance may also affect the system’s accuracy.
+
+
+
+
+% 2. Personal Learning Objectives
+\section{Personal Learning Objectives}
+
+
+\subsection{Learn about computer vision and machine learning}
+One of my main objectives for this project is to improve my ability to work with computer vision models, not just by studying their theory but by applying them to real-world image data. At the moment, I have some understanding of concepts such as convolutional neural networks and transfer learning, but I do not fully grasp how to implement them effectively for a task like mood detection. Through this project, I want to explore how to prepare and preprocess facial expression datasets, how to train and fine-tune different models, and how to evaluate their performance across various scenarios. By experimenting with multiple approaches and comparing their results, I aim to gain a more concrete understanding of how computer vision techniques can be used to build reliable systems that interpret human emotions.
+% TODO: Add content for Working with predictive models.
+
+\subsection{Reflect on ethics of AI}
+% TODO: Add content for Communicating results.
+During this project, I am hoping to expand my understanding of the implications of AI systems, primarily on the implications of AI systems on the recognition of facial emotion. I know some of the ethical limitations of AI, such as biases and privacy issues, but I have not had the opportunity to think on how they are relevant to my work. I hope to identify some of the risks and limitations concerning the fairness and accuracy of the system on different users and across multiple situations. This will be the first step in making my approach responsible, deriving a balanced and realistic understanding that recognizes the technical side of a project and the ethical concerns that must be considered. I hope to advance my work in a more responsible way within the social context
+
+\subsection{Managing study time}
+One problem that has frequently appeared during my studies, is that I tend to manage my time poorly and sometimes barely have any time to study. I tend to underestimate the workload and find myself in a difficult situation when there are deadlines involved. Although I am motivated, this habit tends to affect the way I work and my productivity. In this project I want to adopt a new strategy, by setting weekly deadlines and reserving 1-2 hours of self study per day. In my opinion this will help me set realistic milestones and prevent me from procrastinating and doing all the work in one day. This will not only help me sucessfully complete this project, but will also prove an useful skill in further academic and professional work.
+% TODO: Add content for Managing study time.
+
+% 3. Context
+\section{Context}
+The inspiration for this project comes from a childhood curiosity. Since I was a little kid, I always was fascinated by Apple's products and how they were two steps ahead of their competition. In September 2017, when they introduced the IPhone X, they also announced a new feature that amazed and still amazes me to this day. That feature was facial recognition, the possibility to unlock your phone just by looking at it. That moment sparked my curiosity about how machines can recognize and interpret human faces. At first, I was impressed by the security aspect of unlocking a device with facial recognition, but later I started wondering whether similar technology could also understand more subtle aspects, such as a person’s mood or emotional state. This thought stayed with me, and as I learned more about artificial intelligence during my studies, I realized that computer vision and machine learning could make this possible. My project idea grew out of this interest: if a phone can identify who you are, perhaps a system can also detect how you feel, and this could open the door to meaningful applications in areas like well-being, online learning, and personalized recommendations.
+% TODO: Add content for Context.
+
+% 4. Theoretical Learning Objectives
+\section{Theoretical Learning Objectives}
+Up to this point, I have little knowledge about machine learning and computer vision. To be able to build a reliable model that can recognize emotions in real time, I still need to build up my knowledge in these areas and practice by working on large datasets available on the internet.
+% TODO: Intro text for the section.
+
+\subsection{Main Research Question}
+How effectively can computer vision and machine learning techniques detect and classify a person’s mood based on facial expressions captured from images, videos, or real-time camera input?
+
+\subsection{Sub Research Questions}
+
+\begin{enumerate}
+    \item How does the ethnicity of a person affect the performance and fairness of mood detection models?
+    \item How does real-time camera input compare to static images or pre-recorded videos in terms of accuracy and usability?
+    \item What ethical considerations need to be taken into account when developing and applying facial emotion recognition systems?
+   \item How does the model’s accuracy in mood detection vary across different emotion categories?
+\end{enumerate}
+A (sub)question is considered complete once I have gathered sufficient results, analysis, or reflection to confidently answer it based on evidence from my research and development process.
+
+% TODO: List and discuss sub research questions (e.g., model effectiveness, feature contributions, communication, usability).
+
+\subsection{Topics}
+% TODO: List the topics (Machine learning, Feature Analysis, Result interpretation and feedback, Usability and accessibility).
+In this project, I plan to explore the following areas:
+\begin{enumerate}
+\item \textbf{Computer Vision:} I will learn how to detect and analyze faces from images and videos to recognize facial expressions.
+
+    \item \textbf{Machine Learning:} I will use machine learning models, such as convolutional neural networks, to classify emotions based on facial expressions.
+
+    \item \textbf{Datasets and Data Handling:} I will work with existing facial expression datasets and prepare them for training by cleaning, organizing, and analyzing their quality.
+
+    \item \textbf{Fairness and Ethics:} I will study how different factors, such as ethnicity, can affect the model’s accuracy and how to ensure the system is fair and respects privacy rules.
+\end{enumerate}
+
+\subsection{Bloom's Taxonomy}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/Blooms.jpg}
+    \caption{Bloom's Taxonomy}
+    \label{fig:Blooms Taxonomy}
+\end{figure}
+\begin{description}[leftmargin=0cm, style=nextline]
+    \item[\textbf{Computer Vision – Apply/Understand}] 
+By applying and understanding computer vision principles, I can learn how images are processed and how various algorithms detect and interpret facial features.
+
+    \item[\textbf{Machine Learning – Create/Analyze}] 
+This objective is a combination between Create and Evaluate. I aim to apply machine learning techniques to classfiy moods and then analyze how different models perform on specific datasets. By comparing their accuracy and limitations, I can determine which approach is more suitable for emotion detection.
+
+    \item[\textbf{Datasets and Data Handling – Analyze/Create}] 
+This objective goes hand in hand with Analyze and Create. By analyzing and preparing datasets to ensure reliability, I can determine if the available datasets on the internet are suitable for training mood detection models. This involves examining data quality and recognizing potential biases that may influence the results. After training the AI on datasets from the internet, I can create my own datasets by taking pictures of my friends expressing different moods and annotating them. 
+
+    \item[\textbf{Fairness and Ethics – Evaluate}] 
+This objective focuses on evaluating the fairness and ethical implications of facial emotion recognition. I want to explore how differences in ethnicity may influence the accuracy and reliability of the model, and investigate potential biases that could arise from unbalanced datasets. In addition, I plan to study existing guidelines and policies for responsible AI development, so I can reflect on the standards that should be followed to ensure fairness, inclusivity, and ethical use of mood detection systems.
+
+
+
+\end{description}
+% TODO: Describe how each topic maps to Bloom's Taxonomy levels.
+
+% 5. Learning Strategy
+\section{Learning Strategy}
+To be able to answer the research questions and reach my proposed learning objectives, I will apply several learning strategies:
+\begin{enumerate}
+\item \textbf{Desk Research}: Recap the lessons from the Data Mining course (semester 4) to strengthen my knowledge of machine learning and neural networks.
+\item \textbf{Online Resources}: Study articles and watch YouTube tutorials on facial recognition and computer vision to support setting up my model.
+\item \textbf{Fontys Lessons}: Attend the Deep Learning and Computer Vision lectures and prepare questions to ask lecturers afterwards.
+\item \textbf{Development}: Experiment with different datasets and models to gain hands-on experience and develop the desktop app for presenting emotions in a user-friendly way.
+
+\end{enumerate}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|p{7cm}|p{8cm}|}
+\hline
+\textbf{Sub-Research Question} & \textbf{Strategy (including Learning Strategy)} \\ \hline
+
+How does the ethnicity of a person affect the performance and fairness of mood detection models? & 
+Evaluate model performance across diverse datasets, analyze potential biases, and compare accuracy results between different ethnic groups. 
+\textbf{Learning Strategy:} Desk Research (study bias and fairness in AI), Development (experiment with diverse datasets). \\ \hline
+
+How does real-time camera input compare to static images or pre-recorded videos in terms of accuracy and usability? & 
+Test the model on live webcam input and compare results with static images and pre-recorded videos to measure both accuracy and responsiveness.  
+\textbf{Learning Strategy:} Development (implement experiments), Online Resources (tutorials on real-time computer vision). \\ \hline
+
+What ethical considerations need to be taken into account when developing and applying facial emotion recognition systems? & 
+Conduct desk research on AI ethics and legal frameworks (e.g., GDPR, EU AI Act) and reflect on responsible use, privacy, and fairness in application.  
+\textbf{Learning Strategy:} Desk Research (policies and ethics), Fontys Lessons (ask questions on ethical AI). \\ \hline
+
+How does the model’s accuracy in mood detection vary across different emotion categories? & 
+I will evaluate per-class accuracy using confusion matrices to identify which emotions are most accurately recognized and where misclassifications occur.  
+\textbf{Learning Strategy:} Development (evaluate model performance using confusion matrices), Desk Research (study performance metrics and evaluation methods). \\ \hline
+
+\end{tabular}
+\caption{Sub-Research Questions with Strategies and Learning Strategies}
+\label{tab:subquestions}
+\end{table}
+
+
+% TODO: Describe desk research, dataset usage, development, tutorials and online resources.
+
+\end{document}
