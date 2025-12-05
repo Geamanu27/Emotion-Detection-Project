@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.9.30)  10 NOV 2025 14:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.9.30)  5 DEC 2025 17:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -356,38 +356,379 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@count@id=\count288
 \enitdp@description=\count289
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 30
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/tools\ta
+bularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/tools\ar
+ray.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen167
+\ar@mcellbox=\box55
+\extrarowheight=\dimen168
+\NC@list=\toks23
+\extratabsurround=\skip86
+\backup@length=\skip87
+\ar@cellbox=\box56
+)
+\TX@col@width=\dimen169
+\TX@old@table=\dimen170
+\TX@old@col=\dimen171
+\TX@target=\dimen172
+\TX@delta=\dimen173
+\TX@cols=\count290
+\TX@ftn=\toks24
+)
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/booktabs
+\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen174
+\lightrulewidth=\dimen175
+\cmidrulewidth=\dimen176
+\belowrulesep=\dimen177
+\belowbottomsep=\dimen178
+\aboverulesep=\dimen179
+\abovetopsep=\dimen180
+\cmidrulesep=\dimen181
+\cmidrulekern=\dimen182
+\defaultaddspace=\dimen183
+\@cmidla=\count291
+\@cmidlb=\count292
+\@aboverulesep=\dimen184
+\@belowrulesep=\dimen185
+\@thisruleclass=\count293
+\@lastruleclass=\count294
+\@thisrulewidth=\dimen186
+)
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/float\fl
+oat.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count295
+\float@exts=\toks25
+\float@box=\box57
+\@float@everytoks=\toks26
+\@floatcapt=\box58
+)
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/biblatex
+\biblatex.sty
+Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/logreq\l
+ogreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count296
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/logreq\l
+ogreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/base\ift
+hen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count297
+\c@listtotal=\count298
+\c@listcount=\count299
+\c@liststart=\count300
+\c@liststop=\count301
+\c@citecount=\count302
+\c@citetotal=\count303
+\c@multicitecount=\count304
+\c@multicitetotal=\count305
+\c@instcount=\count306
+\c@maxnames=\count307
+\c@minnames=\count308
+\c@maxitems=\count309
+\c@minitems=\count310
+\c@citecounter=\count311
+\c@maxcitecounter=\count312
+\c@savedcitecounter=\count313
+\c@uniquelist=\count314
+\c@uniquename=\count315
+\c@refsection=\count316
+\c@refsegment=\count317
+\c@maxextratitle=\count318
+\c@maxextratitleyear=\count319
+\c@maxextraname=\count320
+\c@maxextradate=\count321
+\c@maxextraalpha=\count322
+\c@abbrvpenalty=\count323
+\c@highnamepenalty=\count324
+\c@lownamepenalty=\count325
+\c@maxparens=\count326
+\c@parenlevel=\count327
+\blx@tempcnta=\count328
+\blx@tempcntb=\count329
+\blx@tempcntc=\count330
+\c@blx@maxsection=\count331
+\blx@maxsegment@0=\count332
+\blx@notetype=\count333
+\blx@parenlevel@text=\count334
+\blx@parenlevel@foot=\count335
+\blx@sectionciteorder@0=\count336
+\blx@sectionciteorderinternal@0=\count337
+\blx@entrysetcounter=\count338
+\blx@biblioinstance=\count339
+\labelnumberwidth=\skip88
+\labelalphawidth=\skip89
+\biblabelsep=\skip90
+\bibitemsep=\skip91
+\bibnamesep=\skip92
+\bibinitsep=\skip93
+\bibparsep=\skip94
+\bibhang=\skip95
+\blx@bcfin=\read2
+\blx@bcfout=\write3
+\blx@langwohyphens=\language79
+\c@mincomprange=\count340
+\c@maxcomprange=\count341
+\c@mincompwidth=\count342
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/biblatex
+\blx-dm.def
+File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'apa.dbx' found.
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/biblatex
+-apa\apa.dbx
+File: apa.dbx 2025/08/27 v9.20 APA biblatex style data model
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count343
+\c@savedafterword=\count344
+\c@annotator=\count345
+\c@savedannotator=\count346
+\c@author=\count347
+\c@savedauthor=\count348
+\c@bookauthor=\count349
+\c@savedbookauthor=\count350
+\c@commentator=\count351
+\c@savedcommentator=\count352
+\c@editor=\count353
+\c@savededitor=\count354
+\c@editora=\count355
+\c@savededitora=\count356
+\c@editorb=\count357
+\c@savededitorb=\count358
+\c@editorc=\count359
+\c@savededitorc=\count360
+\c@foreword=\count361
+\c@savedforeword=\count362
+\c@holder=\count363
+\c@savedholder=\count364
+\c@introduction=\count365
+\c@savedintroduction=\count366
+\c@namea=\count367
+\c@savednamea=\count368
+\c@nameb=\count369
+\c@savednameb=\count370
+\c@namec=\count371
+\c@savednamec=\count372
+\c@translator=\count373
+\c@savedtranslator=\count374
+\c@shortauthor=\count375
+\c@savedshortauthor=\count376
+\c@shorteditor=\count377
+\c@savedshorteditor=\count378
+\c@narrator=\count379
+\c@savednarrator=\count380
+\c@execproducer=\count381
+\c@savedexecproducer=\count382
+\c@execdirector=\count383
+\c@savedexecdirector=\count384
+\c@with=\count385
+\c@savedwith=\count386
+\c@labelname=\count387
+\c@savedlabelname=\count388
+\c@institution=\count389
+\c@savedinstitution=\count390
+\c@lista=\count391
+\c@savedlista=\count392
+\c@listb=\count393
+\c@savedlistb=\count394
+\c@listc=\count395
+\c@savedlistc=\count396
+\c@listd=\count397
+\c@savedlistd=\count398
+\c@liste=\count399
+\c@savedliste=\count400
+\c@listf=\count401
+\c@savedlistf=\count402
+\c@location=\count403
+\c@savedlocation=\count404
+\c@organization=\count405
+\c@savedorganization=\count406
+\c@origlocation=\count407
+\c@savedoriglocation=\count408
+\c@origpublisher=\count409
+\c@savedorigpublisher=\count410
+\c@publisher=\count411
+\c@savedpublisher=\count412
+\c@language=\count413
+\c@savedlanguage=\count414
+\c@origlanguage=\count415
+\c@savedoriglanguage=\count416
+\c@citation=\count417
+\c@savedcitation=\count418
+\c@pageref=\count419
+\c@savedpageref=\count420
+\shorthandwidth=\skip96
+\shortjournalwidth=\skip97
+\shortserieswidth=\skip98
+\shorttitlewidth=\skip99
+\shortauthorwidth=\skip100
+\shorteditorwidth=\skip101
+\locallabelnumberwidth=\skip102
+\locallabelalphawidth=\skip103
+\localshorthandwidth=\skip104
+\localshortjournalwidth=\skip105
+\localshortserieswidth=\skip106
+\localshorttitlewidth=\skip107
+\localshortauthorwidth=\skip108
+\localshorteditorwidth=\skip109
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/biblatex
+\blx-compat.def
+File: blx-compat.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/biblatex
+\biblatex.def
+File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+\c@textcitecount=\count421
+\c@textcitetotal=\count422
+\c@textcitemaxnames=\count423
+\c@biburlbigbreakpenalty=\count424
+\c@biburlbreakpenalty=\count425
+\c@biburlnumpenalty=\count426
+\c@biburlucpenalty=\count427
+\c@biburllcpenalty=\count428
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count429
+)
+Package biblatex Info: Trying to load bibliography style 'apa'...
+Package biblatex Info: ... file 'apa.bbx' found.
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/biblatex
+-apa\apa.bbx
+File: apa.bbx 2025/08/27 v9.20 APA biblatex references style
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/biblatex
+/bbx\standard.bbx
+File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count430
+\c@bbx:relatedtotal=\count431
+)
+Package biblatex Info: Delimiter 'nameyeardelim' in context 'bib' already defin
+ed, overwriting.
+Package biblatex Info: Delimiter 'nameyeardelim' in context 'biblist' already d
+efined, overwriting.
+Package biblatex Info: Delimiter 'nonameyeardelim' in context 'bib' already def
+ined, overwriting.
+Package biblatex Info: Delimiter 'nonameyeardelim' in context 'biblist' already
+ defined, overwriting.
+)
+Package biblatex Info: Trying to load citation style 'apa'...
+Package biblatex Info: ... file 'apa.cbx' found.
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/biblatex
+-apa\apa.cbx
+File: apa.cbx 2025/08/27 v9.20 APA biblatex citation style
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
+ overwriting.
+Package biblatex Info: Delimiter 'andothersdelim' in context '' already defined
+, overwriting.
+Package biblatex Info: Redefining '\fullcite'.
+Package biblatex Info: Redefining '\citeauthor'.
+Package biblatex Info: Redefining '\citeyear'.
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcites'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\footcitetexts'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\smartcites'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/biblatex
+\biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel
+\expl3.sty
+Package: expl3 2025-03-26 L3 programming layer (loader) 
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/l3backen
+d\l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-03-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count432
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2025-03-26 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/biblatex
+\blx-case-expl3.sty
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/l3packag
+es/xparse\xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
+))
+\@quotelevel=\count433
+\@quotereset=\count434
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 37
 .
 
 (C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr
 .fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/l3backen
-d\l3backend-pdftex.def
-File: l3backend-pdftex.def 2025-03-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count290
 ) (ai_systems_portfolio.aux)
 \openout1 = `ai_systems_portfolio.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -423,26 +764,26 @@ LaTeX Font Info:    ... okay on input line 30.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 30.
+Package hyperref Info: Link coloring OFF on input line 37.
 (ai_systems_portfolio.out) (ai_systems_portfolio.out)
-\@outlinefile=\write3
-\openout3 = `ai_systems_portfolio.out'.
+\@outlinefile=\write4
+\openout4 = `ai_systems_portfolio.out'.
 
 
 (C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/context/base/m
 kii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
-\scratchdimen=\dimen167
-\scratchbox=\box55
-\nofMPsegments=\count292
-\nofMParguments=\count293
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count294
-\MPscratchDim=\dimen168
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count435
+\scratchdimen=\dimen187
+\scratchbox=\box59
+\nofMPsegments=\count436
+\nofMParguments=\count437
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count438
+\MPscratchDim=\dimen188
+\MPnumerator=\count439
+\makeMPintoPDFobject=\count440
+\everyMPtoPDFconversion=\toks28
 )
 (C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf
 -pkg\epstopdf-base.sty
@@ -454,6 +795,49 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 \epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+Package biblatex Info: Trying to load language 'english' -> 'english-apa'...
+Package biblatex Info: ... file 'english-apa.lbx' found.
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/biblatex
+-apa\english-apa.lbx
+File: english-apa.lbx 2025/08/27 v9.20 APA biblatex localisation
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/biblatex
+/lbx\english.lbx
+File: english.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'american' -> 'american-apa'...
+Package biblatex Info: ... file 'american-apa.lbx' found.
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/biblatex
+-apa\american-apa.lbx
+File: american-apa.lbx 2025/08/27 v9.20 APA biblatex localisation
+Package biblatex Info: Trying to load language 'american'...
+Package biblatex Info: ... file 'american.lbx' found.
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/biblatex
+/lbx\american.lbx
+File: american.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/biblatex
+/lbx\english.lbx
+File: english.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+))))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `ai_systems_portfolio.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'ai_systems_portfolio.bbl' found.
+ (ai_systems_portfolio.bbl)
+Package biblatex Info: Reference section=0 on input line 37.
+Package biblatex Info: Reference segment=0 on input line 37.
+
 
 [1
 
@@ -495,8 +879,8 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 1.
 )
-\tf@toc=\write4
-\openout4 = `ai_systems_portfolio.toc'.
+\tf@toc=\write5
+\openout5 = `ai_systems_portfolio.toc'.
 
 
 
@@ -507,33 +891,45 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [1
 
 ]
-<images/SWOT.png, id=89, 770.88pt x 578.16pt>
+<images/SWOT.png, id=114, 770.88pt x 578.16pt>
 File: images/SWOT.png Graphic file (type png)
 <use images/SWOT.png>
-Package pdftex.def Info: images/SWOT.png  used on input line 79.
+Package pdftex.def Info: images/SWOT.png  used on input line 86.
 (pdftex.def)             Requested size: 317.07614pt x 237.80582pt.
 
 
-[2 <./images/SWOT.png (PNG copy)>]
+[2
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.101 
+       <./images/SWOT.png (PNG copy)>]
 
 [3]
 
 [4]
-<images/Blooms.jpg, id=106, 746.01291pt x 419.63226pt>
+<images/Blooms.jpg, id=131, 746.01291pt x 419.63226pt>
 File: images/Blooms.jpg Graphic file (type jpg)
 <use images/Blooms.jpg>
-Package pdftex.def Info: images/Blooms.jpg  used on input line 155.
+Package pdftex.def Info: images/Blooms.jpg  used on input line 162.
 (pdftex.def)             Requested size: 317.07614pt x 178.35736pt.
 
 
 Package enumitem Warning: Negative labelwidth. This does not make much
-(enumitem)                sense, on input line 159.
+(enumitem)                sense, on input line 166.
 
 
 
-[5 <./images/Blooms.jpg>]
-Underfull \hbox (badness 1546) in paragraph at lines 205--205
-[]\T1/lmr/m/n/12 How does the model's ac-cu-racy in
+[5
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.172 
+       <./images/Blooms.jpg>]
+Underfull \hbox (badness 1546) in paragraph at lines 212--212
+[]|\T1/lmr/m/n/12 How does the model's ac-cu-racy in
  []
 
 
@@ -543,29 +939,201 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [6]
 
-[7] (ai_systems_portfolio.aux)
+[7
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.220 \clearpage
+                ]
+Underfull \hbox (badness 10000) in paragraph at lines 223--228
+
+ []
+
+
+
+[8
+
+]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
+46.
+
+(C:\Users\Supreme Leader David\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lm
+r.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+
+[9{C:/Users/Supreme Leader David/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/
+lm/lm-ts1.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 269--272
+
+ []
+
+
+
+[10]
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 327--327
+[]|\T1/lmr/m/n/10.95 Unintended stor-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--327
+[]|\T1/lmr/m/n/10.95 Uneven ac-cu-racy across
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--327
+[]|\T1/lmr/m/n/10.95 Class-balance checks, per-
+ []
+
+
+
+[12]
+<images/MobileNet_25e/mobilenet_accuracy_chart_25e.png, id=209, 722.7pt x 433.6
+2pt>
+File: images/MobileNet_25e/mobilenet_accuracy_chart_25e.png Graphic file (type 
+png)
+<use images/MobileNet_25e/mobilenet_accuracy_chart_25e.png>
+Package pdftex.def Info: images/MobileNet_25e/mobilenet_accuracy_chart_25e.png 
+ used on input line 351.
+(pdftex.def)             Requested size: 385.02547pt x 231.01509pt.
+<images/MobileNet_25e/mobilenet_confusion_matrix_25e.png, id=211, 722.7pt x 578
+.16pt>
+File: images/MobileNet_25e/mobilenet_confusion_matrix_25e.png Graphic file (typ
+e png)
+<use images/MobileNet_25e/mobilenet_confusion_matrix_25e.png>
+Package pdftex.def Info: images/MobileNet_25e/mobilenet_confusion_matrix_25e.pn
+g  used on input line 361.
+(pdftex.def)             Requested size: 294.42636pt x 235.53857pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[13
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.367 \newpage
+              {C:/Users/Supreme Leader David/AppData/Local/Programs/MiKTeX/font
+s/enc/dvips/lm/lm-mathsy.enc} <./images/MobileNet_25e/mobilenet_accuracy_chart_
+25e.png>]
+<images/MobileNet_35e/mobilenet_accuracy_chart_35e.png, id=220, 722.7pt x 433.6
+2pt>
+File: images/MobileNet_35e/mobilenet_accuracy_chart_35e.png Graphic file (type 
+png)
+<use images/MobileNet_35e/mobilenet_accuracy_chart_35e.png>
+Package pdftex.def Info: images/MobileNet_35e/mobilenet_accuracy_chart_35e.png 
+ used on input line 372.
+(pdftex.def)             Requested size: 385.02547pt x 231.01509pt.
+
+
+[14
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.378     \item \textbf
+                       {Fear remains challenging:} Even with extended traini...
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.378     \item \textbf
+                       {Fear remains challenging:} Even with extended traini...
+ <./images/MobileNet_25e/mobilenet_confusion_matrix_25e.png> <./images/MobileNe
+t_35e/mobilenet_accuracy_chart_35e.png>]
+<images/MobileNet_35e/mobilenet_confusion_matrix_35e.png, id=229, 722.7pt x 578
+.16pt>
+File: images/MobileNet_35e/mobilenet_confusion_matrix_35e.png Graphic file (typ
+e png)
+<use images/MobileNet_35e/mobilenet_confusion_matrix_35e.png>
+Package pdftex.def Info: images/MobileNet_35e/mobilenet_confusion_matrix_35e.pn
+g  used on input line 382.
+(pdftex.def)             Requested size: 294.42636pt x 235.53857pt.
+
+
+[15
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.386 \newpage
+               <./images/MobileNet_35e/mobilenet_confusion_matrix_35e.png>]
+<images/MobileNet_3c/mobilenet_accuracy_chart_3c.png, id=236, 722.7pt x 433.62p
+t>
+File: images/MobileNet_3c/mobilenet_accuracy_chart_3c.png Graphic file (type pn
+g)
+<use images/MobileNet_3c/mobilenet_accuracy_chart_3c.png>
+Package pdftex.def Info: images/MobileNet_3c/mobilenet_accuracy_chart_3c.png  u
+sed on input line 391.
+(pdftex.def)             Requested size: 385.02547pt x 231.01509pt.
+<images/MobileNet_3c/mobilenet_confusion_matrix_3c.png, id=237, 722.7pt x 578.1
+6pt>
+File: images/MobileNet_3c/mobilenet_confusion_matrix_3c.png Graphic file (type 
+png)
+<use images/MobileNet_3c/mobilenet_confusion_matrix_3c.png>
+Package pdftex.def Info: images/MobileNet_3c/mobilenet_confusion_matrix_3c.png 
+ used on input line 401.
+(pdftex.def)             Requested size: 385.02547pt x 308.02011pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[16
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.405 \newpage
+               <./images/MobileNet_3c/mobilenet_accuracy_chart_3c.png>]
+
+[17
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.418 \newpage
+               <./images/MobileNet_3c/mobilenet_confusion_matrix_3c.png>]
+
+[18] (ai_systems_portfolio.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
  ***********
 Package rerunfilecheck Info: File `ai_systems_portfolio.out' has not changed.
-(rerunfilecheck)             Checksum: 41693F8125D4CB08B223077B3ACBFE1E;2218.
+(rerunfilecheck)             Checksum: B20DAE24DDB33B964212F64BB4D0B1E3;3069.
+Package logreq Info: Writing requests to 'ai_systems_portfolio.run.xml'.
+\openout1 = `ai_systems_portfolio.run.xml'.
+
  ) 
 Here is how much of TeX's memory you used:
- 10312 strings out of 469959
- 165008 string characters out of 5462538
- 555692 words of memory out of 5000000
- 36940 multiletter control sequences out of 15000+600000
- 662932 words of font info for 60 fonts, out of 8000000 for 9000
+ 18802 strings out of 469959
+ 339551 string characters out of 5462538
+ 1253717 words of memory out of 5000000
+ 45297 multiletter control sequences out of 15000+600000
+ 677159 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,1244b,569s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,1244b,5050s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Supreme Leader David/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/lm/lmbx12.pfb><C:/Users/Supreme Leader David/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/lm/lmr12.pfb><C:/Users/Supreme Leader David/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmr17.pfb>
-Output written on ai_systems_portfolio.pdf (9 pages, 309721 bytes).
+ic/lm/lmbx10.pfb><C:/Users/Supreme Leader David/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/lm/lmbx12.pfb><C:/Users/Supreme Leader David/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Supreme Leader David/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Supreme L
+eader David/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/U
+sers/Supreme Leader David/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
+mri12.pfb><C:/Users/Supreme Leader David/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/lm/lmsy10.pfb>
+Output written on ai_systems_portfolio.pdf (20 pages, 602273 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 39 named destinations out of 1000 (max. 500000)
- 123 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 317 PDF objects out of 1000 (max. 8388607)
+ 78 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 

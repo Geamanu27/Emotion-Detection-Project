@@ -9,9 +9,16 @@
 \usepackage{tocloft}
 \usepackage{graphicx}
 \usepackage{enumitem} % For custom list formatting
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage[
+    backend=biber,
+    style=apa,
+    sorting=nyt
+]{biblatex}
 
-
-
+\addbibresource{references.bib}
 
 \geometry{margin=1in}
 \setstretch{1.15}
@@ -210,8 +217,205 @@ I will evaluate per-class accuracy using confusion matrices to identify which em
 \caption{Sub-Research Questions with Strategies and Learning Strategies}
 \label{tab:subquestions}
 \end{table}
+\clearpage  
+% 6. Theoretical Learning Objectives
+\section{Theoretical Learning Objectives}
+The main question to answer in this project is as follows: \\
+\textbf{How effectively can computer vision and machine learning techniques detect and classify
+a person’s mood based on facial expressions captured from images, videos, or real-time
+camera input?} \\\\
+To answer this question, first we need to answer the subquestions mentioned below:
+
+\subsection{First Sub Question:}
+\textbf{How does the ethnicity of a person affect the performance and fairness of mood detection models?}
+
+\subsubsection*{Introduction to Algorithmic Bias}
+Computer vision models are not inherently neutral; they reflect the data they are trained on. In the context of facial emotion recognition (FER), the ethnicity of a subject significantly impacts model performance. If a dataset is unbalanced (containing mostly images of one demographic group), the model will "overfit" to the facial features, skin tones, and lighting conditions typical of that group, while failing to generalize to others. This phenomenon is known as Algorithmic Bias.
+
+\subsubsection*{The Dataset Problem: FER2013 vs. Reality}
+The model developed in this project was initially trained on the FER2013 dataset. Research indicates that FER2013, like many early academic datasets, is heavily skewed towards White/Western faces. This can lead to a number of problems: 
+\begin{enumerate}
+\item \textbf{Feature Overfitting:} The MobileNet model learns to detect emotions based on specific landmarks (e.g., the curve of a mouth, the crinkle of an eye). If the training data lacks diversity, the model may treat features common to specific ethnicities (such as different eye shapes or brow structures) as indicators of specific emotions rather than neutral physical traits.
+
+\item \textbf{Performance Gap:} Consequently, when the model is tested on non-Western faces (e.g., Asian or Black individuals), the accuracy drops. The "recall" score (The ability to find all examples of an emotion) is significantly lower for minority groups because the model simply hasn't seen enough examples to recognize their expressions confidently.
+\end{enumerate}
+\newpage
+\subsubsection*{The "Angry Black Man" Paradox}
+One of the most documented and harmful failures in facial recognition fairness is the "Angry Black Man" paradox. This occurs when a model disproportionately misclassifies "Neutral" or "Serious" expressions of Black men as "Angry."
+
+\textbullet \textbf{Cause:} The model learns to associate darker skin tones or specific natural resting face structures with the label "Angry" because the few examples of Black individuals in the training set might have been biased towards negative emotions, or simply because the model confuses physical features with emotional signals.
+
+\textbullet \textbf{Impact:} In a real-world deployment (e.g., an automated interview screener or a security system), this bias could lead to unfair penalization or profiling of Black individuals, flagging them as aggressive when they are simply neutral. This violates the fairness principle outlined in the EU AI Act \cite{aiact}.
+
+\subsubsection*{The "Polite Smile" Paradox}
+A significant paradox affects Asian demographics, often rooted in Cultural Display Rules rather than just physical features. This paradox occurs when models incorrectly classify expressions of embarrassment, anxiety, or politeness as "Happy."
+
+\textbullet \textbf{Cause:} Western-centric datasets like FER2013 almost exclusively annotate the geometric feature of an upturned mouth as "Happiness." However, in many East Asian cultures (e.g., Japan, Thailand), smiling is frequently used as a social tool to mask negative emotions like embarrassment or confusion. Because the model lacks this cultural context, it sees the geometry of a smile and ignores other subtle cues (like the eyes) that might indicate distress.
+
+\textbullet \textbf{Impact:} This bias is critical in healthcare or wellbeing applications. For example, an AI therapist or mental health monitoring app might incorrectly classify a distressed Asian user as "Happy" or "Doing well" simply because they are smiling out of polite discomfort. This leads to a false positive for well-being, potentially denying the user necessary help.
+
+\subsubsection*{Mitigation Strategies and AffectNet}
+To address these ethnic disparities, simply training for more epochs is insufficient. The underlying data must be corrected:
+\begin{enumerate}
+\item \textbf{Dataset Balancing:} Moving from FER2013 to larger, like AffectNet provides a more balanced representation of global demographics, reducing the performance gap.
+
+\item \textbf{Bias Auditing:} Running a "Bias Audit" (testing the model on a balanced dataset) is crucial to identifying and quantifying these risks before deployment.
+\end{enumerate}
+\subsubsection*{Conclusion}
+Ethnicity plays a critical role in the reliability of mood detection models. Without intentional intervention, models trained on standard public datasets will exhibit significant bias, performing accurately on White faces while misinterpreting or under-performing on minority groups. Ensuring fairness requires a shift from model-centric optimization to data-centric curation, ensuring all ethnicities are represented equally in the training phase.
+
+%=======================================================================
+\subsection{Second Sub Question:}
+\textbf{How does reat-time camera input compare to static images or pre-recorded videos in terms of accuracy and usability}\\\\
+\textbf{WORK IN PROGRESS}
+%=======================================================================
+\subsection{Third Sub Question:}
+\textbf{What ethical considerations need to be taken into account when developing and applying facial emotion recognition systems?}
 
 
-% TODO: Describe desk research, dataset usage, development, tutorials and online resources.
+\subsubsection{Privacy and Data Protection}
+Facial data constitutes sensitive biometric information. To minimize risk, the project follows data minimization and purpose limitation, as required by the GDPR \cite{gdpr}. 
+\begin{itemize}
+  \item \textbf{Local processing:} All inference is performed on-device; no raw images or identifiers are transmitted.
+  \item \textbf{No permanent storage:} By default, images/frames are processed in memory only. Any diagnostic logging excludes personal data.
+  \item \textbf{Data deletion:} Temporary buffers are cleared immediately after inference.
+\end{itemize}
+
+\subsubsection{User Consent and Transparency}
+The application implements explicit, informed consent in compliance with Article 6(1)(a) of the GDPR \cite{gdpr}.
+\begin{itemize}
+  \item \textbf{Opt-in:} Camera access and emotion inference are disabled until the user enables them.
+  \item \textbf{Just-in-time notices:} A short notice explains what is processed, for what purpose, and for how long.
+  \item \textbf{Controls:} Clear on/off toggle, session indicator (e.g., icon/LED), and a link to the privacy summary.
+\end{itemize}
+
+\subsubsection{Data Storage and Security}
+If short-term storage is required for evaluation, the design follows the principles of integrity and confidentiality from Article 5 of the GDPR \cite{gdpr} and ISO-style information security best practices.
+\begin{itemize}
+  \item \textbf{Scope:} Store only what is strictly necessary (e.g., aggregated metrics).
+  \item \textbf{Protection:} Encrypt at rest; restrict access to authorized personnel.
+  \item \textbf{Retention:} Define retention windows and automatic deletion schedules.
+\end{itemize}
+
+\subsubsection{AI Bias and Fairness}
+The model may inherit bias from training data, which is addressed in line with the fairness principles of the EU AI Act \cite{aiact}. Mitigations include:
+\begin{itemize}
+  \item Inspecting class distribution and augmenting underrepresented classes.
+  \item Reporting class-wise metrics and confusion matrices.
+  \item Avoiding high-stakes use; keeping predictions informational, not determinative.
+\end{itemize}
+
+\subsubsection{Ethical Use and Context}
+The main goal of this project is to use emotion detection in a positive and helpful way, such as reminding users to take breaks or encouraging them when they show positive emotions. The system is not made for surveillance, profiling, or influencing people’s behaviour. All demonstrations and tests clearly explain the purpose of the system to anyone involved. Users have full control over when the application is active and can pause or stop it at any time. Any future version of the app will show a clear indicator when the camera is on and will include a short, easy-to-understand privacy explanation. By setting clear limits and responsible uses, the project aims to keep emotion detection ethical and focused on helping people, consistent with the IEEE’s principles of human wellbeing and accountability \cite{ieee}.
+
+\subsubsection{Regulatory Alignment}
+The project aligns with key European data-protection and AI-ethics frameworks, including the General Data Protection Regulation (GDPR) \cite{gdpr} and the upcoming EU AI Act \cite{aiact}. Under GDPR, it respects all major principles: lawfulness, fairness, transparency, purpose limitation, data minimisation, and integrity/confidentiality. The design treats all facial analysis as sensitive processing and ensures that it stays within a low-risk category by design—local processing, explicit user consent, and transparent operation. In terms of governance, documentation is maintained for the model’s purpose, assumptions, and limitations to promote accountability. The project also draws on the IEEE Ethically Aligned Design framework \cite{ieee}, focusing on human agency, accountability, and the promotion of wellbeing. Together, these measures ensure that the prototype not only complies with current legal requirements but also anticipates future standards for trustworthy and responsible AI systems.
+
+\subsubsection*{Risk \& Mitigation Summary}
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}lXlX@{}}
+\toprule
+\textbf{Risk} & \textbf{Description} & \textbf{Likelihood} & \textbf{Mitigation} \\
+\midrule
+Privacy leakage & Unintended storage/transmission of frames & Low & On-device processing, no raw logs, code review \\
+Bias & Uneven accuracy across groups/classes & Medium & Class-balance checks, per-class metrics, iterative tuning \\
+Misuse & Use for surveillance without consent & Low/Med & Usage policy, UI indicators, opt-in only \\
+Security & Unauthorized access to temp data & Low & Encryption, least-privilege access, short retention \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Conclusion}
+With local processing, explicit consent, limited storage, fairness checks, and clear scope limits, the prototype adheres to responsible AI practices and prepares for compliant, user-respecting experimentation. This approach demonstrates alignment with the ethical frameworks of GDPR \cite{gdpr}, the EU AI Act \cite{aiact}, and IEEE Ethically Aligned Design \cite{ieee}.
+
+
+%====================================================
+\subsection{Fourth Sub Question:}
+\textbf{How does the model's accuracy in mood detection vary across different emotion categories?}\\
+To answer this question, three iterations of the model were evaluated:
+\begin{enumerate}
+    \item \textbf{Model A:} 7 Classes (All emotions), trained for 25 Epochs.
+    \item \textbf{Model B:} 7 Classes (All emotions), trained for 35 Epochs.
+    \item \textbf{Model C:} 3 Classes (Positive, Negative, Neutral), trained for 35 Epochs.
+\end{enumerate}
+
+\noindent The performance of each model was analysed using the per-class F1 scores and confusion matrices. These reveal how reliably the system can distinguish between specific emotions and which categories remain challenging for the MobileNet architecture trained on FER2013.
+
+\subsubsection*{Model A: 7 Classes, 25 Epochs}
+Model A shows a clear imbalance in performance across emotion categories. Emotions with highly expressive and distinct facial cues perform best, while subtle or ambiguous categories remain problematic.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.85\textwidth]{images/MobileNet_25e/mobilenet_accuracy_chart_25e.png}
+    \caption{Model A — F1-score per class (7 classes, 25 epochs)}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Highest-performing emotions:} \emph{happy} (F1 $\approx$ 0.87) and \emph{surprise} (F1 $\approx$ 0.76). These emotions have strong visual signals and are well-represented in FER2013.
+    \item \textbf{Moderate performance:} \emph{angry} (F1 $\approx$ 0.59), \emph{neutral} (F1 $\approx$ 0.61), \emph{disgust} (F1 $\approx$ 0.57), and \emph{sad} (F1 $\approx$ 0.55). These emotions often overlap visually, leading to frequent misclassifications.
+    \item \textbf{Lowest-performing emotion:} \emph{fear} (F1 $\approx$ 0.42), which is heavily confused with \emph{sad}, \emph{surprise}, and \emph{angry}. This aligns with the literature, as fear expressions are subtle and inconsistently depicted in FER2013.
+\end{itemize}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.65\textwidth]{images/MobileNet_25e/mobilenet_confusion_matrix_25e.png}
+    \caption{Model A — Confusion Matrix (7 classes, 25 epochs)}
+\end{figure}
+The confusion matrix confirms broad dispersion among negative emotions, suggesting the model struggles to differentiate fine-grained emotional cues under limited training duration.
+
+
+\newpage
+\subsubsection*{Model B: 7 Classes, 35 Epochs}
+Increasing the training time to 35 epochs improves overall stability and class separation.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.85\textwidth]{images/MobileNet_35e/mobilenet_accuracy_chart_35e.png}
+    \caption{Model B — F1-score per class (7 classes, 35 epochs)}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Improvements:} Most emotion categories show higher F1 scores compared to Model A. Notably, \emph{happy} remains the strongest class (F1 $\approx$ 0.89), and \emph{surprise} increases to roughly 0.79.
+    \item \textbf{Negative emotion patterns:} \emph{angry}, \emph{disgust}, \emph{sad}, and \emph{neutral} all experience modest improvements, but the confusion matrix still reveals strong overlap among these categories.
+    \item \textbf{Fear remains challenging:} Even with extended training, \emph{fear} continues to have the lowest performance (F1 $\approx$ 0.46), confirming its status as the least distinguishable category.
+\end{itemize}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.65\textwidth]{images/MobileNet_35e/mobilenet_confusion_matrix_35e.png}
+    \caption{Model B — Confusion Matrix (7 classes, 35 epochs)}
+\end{figure}
+Overall, Model B demonstrates that longer training helps refine class boundaries, but the inherent ambiguity and dataset imbalance in FER2013 limit the achievable accuracy for certain emotions.
+\newpage
+\subsubsection*{Model C: 3 Classes (Positive, Negative, Neutral), 35 Epochs}
+When emotions are grouped into broader categories, performance improves substantially. This setup reduces the complexity of distinguishing subtle expressions and mitigates dataset imbalance.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{images/MobileNet_3c/mobilenet_accuracy_chart_3c.png}
+    \caption{Model C — F1-score per class (3 classes, 35 epochs)}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Positive:} The strongest category (F1 $\approx$ 0.88), driven largely by the clarity of the \emph{happy} class.
+    \item \textbf{Negative:} Strong performance (F1 $\approx$ 0.84), showing that grouping multiple negative emotions stabilises classification.
+    \item \textbf{Neutral:} The weakest category (F1 $\approx$ 0.63), frequently misclassified as Positive or Negative. This reflects the inherent ambiguity of neutral expressions and their overlap with low-intensity emotions.
+\end{itemize}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.85\textwidth]{images/MobileNet_3c/mobilenet_confusion_matrix_3c.png}
+    \caption{Model C — Confusion Matrix (3 classes, 35 epochs)}
+\end{figure}
+The confusion matrix shows that Neutral expressions often sit between Positive and Negative cues, explaining the reduced F1 score compared to the other two classes.
+\newpage
+\subsubsection*{Conclusion}
+Across all three models, certain trends are consistent:
+\begin{itemize}
+    \item Emotions with clear, distinct facial features (e.g., \emph{happy}, \emph{surprise}) consistently achieve the highest accuracy.
+    \item Subtle, low-intensity, or culturally variable emotions (\emph{fear}, \emph{disgust}, \emph{sad}) remain challenging regardless of training duration.
+    \item Increasing epochs improves performance but does not fully resolve dataset-driven limitations.
+    \item Reducing the classification task to broader emotion groups significantly increases accuracy, especially for Positive and Negative categories.
+\end{itemize}
+
+In summary, the model’s accuracy varies substantially across emotion types, with high performance on expressive emotions and weaker performance on subtle or ambiguous categories. This variation reflects both the limitations of FER2013 and the biological reality that some emotions are inherently harder to recognise.
+
+
+\newpage
+\printbibliography
 
 \end{document}

@@ -1,0 +1,107 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/apasortcite//global/global/global}
+    \entry{aiact}{misc}{}{}
+      \list{organization}{1}{%
+        {European Commission}%
+      }
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{note}{COM(2021) 206 final. Available at \url{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206}}
+      \field{title}{Artificial Intelligence Act: Proposal for a Regulation Laying Down Harmonised Rules on Artificial Intelligence}
+      \field{year}{2021}
+    \endentry
+    \entry{ieee}{misc}{}{}
+      \list{organization}{1}{%
+        {IEEE Standards Association}%
+      }
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{note}{Available at \url{https://ethicsinaction.ieee.org/}}
+      \field{title}{Ethically Aligned Design: A Vision for Prioritizing Human Well-being with Autonomous and Intelligent Systems}
+      \field{year}{2019}
+    \endentry
+    \entry{gdpr}{misc}{}{}
+      \list{organization}{2}{%
+        {European Parliament}%
+        {Council}%
+      }
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{note}{Available at \url{https://eur-lex.europa.eu/eli/reg/2016/679/oj}}
+      \field{title}{General Data Protection Regulation (EU) 2016/679}
+      \field{year}{2016}
+    \endentry
+  \enddatalist
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{aiact}{misc}{}{}
+      \list{organization}{1}{%
+        {European Commission}%
+      }
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{note}{COM(2021) 206 final. Available at \url{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206}}
+      \field{title}{Artificial Intelligence Act: Proposal for a Regulation Laying Down Harmonised Rules on Artificial Intelligence}
+      \field{year}{2021}
+    \endentry
+    \entry{ieee}{misc}{}{}
+      \list{organization}{1}{%
+        {IEEE Standards Association}%
+      }
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{note}{Available at \url{https://ethicsinaction.ieee.org/}}
+      \field{title}{Ethically Aligned Design: A Vision for Prioritizing Human Well-being with Autonomous and Intelligent Systems}
+      \field{year}{2019}
+    \endentry
+    \entry{gdpr}{misc}{}{}
+      \list{organization}{2}{%
+        {European Parliament}%
+        {Council}%
+      }
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{note}{Available at \url{https://eur-lex.europa.eu/eli/reg/2016/679/oj}}
+      \field{title}{General Data Protection Regulation (EU) 2016/679}
+      \field{year}{2016}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -12,3 +12,15 @@
 \contentsline {subsection}{\numberline {4.3}Topics}{5}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Bloom's Taxonomy}{5}{subsection.4.4}%
 \contentsline {section}{\numberline {5}Learning Strategy}{6}{section.5}%
+\contentsline {section}{\numberline {6}Theoretical Learning Objectives}{8}{section.6}%
+\contentsline {subsection}{\numberline {6.1}First Sub Question:}{8}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Second Sub Question:}{10}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Third Sub Question:}{10}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Privacy and Data Protection}{10}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}User Consent and Transparency}{10}{subsubsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3}Data Storage and Security}{11}{subsubsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.4}AI Bias and Fairness}{11}{subsubsection.6.3.4}%
+\contentsline {subsubsection}{\numberline {6.3.5}Ethical Use and Context}{11}{subsubsection.6.3.5}%
+\contentsline {subsubsection}{\numberline {6.3.6}Regulatory Alignment}{11}{subsubsection.6.3.6}%
+\contentsline {subsubsection}{\numberline {6.3.7}Conclusion}{12}{subsubsection.6.3.7}%
+\contentsline {subsection}{\numberline {6.4}Fourth Sub Question:}{12}{subsection.6.4}%
