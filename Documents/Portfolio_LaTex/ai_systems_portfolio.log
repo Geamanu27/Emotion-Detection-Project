@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.9.30)  5 DEC 2025 17:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.9.30)  5 DEC 2025 19:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -891,7 +891,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [1
 
 ]
-<images/SWOT.png, id=114, 770.88pt x 578.16pt>
+<images/SWOT.png, id=134, 770.88pt x 578.16pt>
 File: images/SWOT.png Graphic file (type png)
 <use images/SWOT.png>
 Package pdftex.def Info: images/SWOT.png  used on input line 86.
@@ -909,7 +909,7 @@ l.101
 [3]
 
 [4]
-<images/Blooms.jpg, id=131, 746.01291pt x 419.63226pt>
+<images/Blooms.jpg, id=151, 746.01291pt x 419.63226pt>
 File: images/Blooms.jpg Graphic file (type jpg)
 <use images/Blooms.jpg>
 Package pdftex.def Info: images/Blooms.jpg  used on input line 162.
@@ -991,7 +991,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 327--327
 
 
 [12]
-<images/MobileNet_25e/mobilenet_accuracy_chart_25e.png, id=209, 722.7pt x 433.6
+<images/MobileNet_25e/mobilenet_accuracy_chart_25e.png, id=229, 722.7pt x 433.6
 2pt>
 File: images/MobileNet_25e/mobilenet_accuracy_chart_25e.png Graphic file (type 
 png)
@@ -999,7 +999,7 @@ png)
 Package pdftex.def Info: images/MobileNet_25e/mobilenet_accuracy_chart_25e.png 
  used on input line 351.
 (pdftex.def)             Requested size: 385.02547pt x 231.01509pt.
-<images/MobileNet_25e/mobilenet_confusion_matrix_25e.png, id=211, 722.7pt x 578
+<images/MobileNet_25e/mobilenet_confusion_matrix_25e.png, id=231, 722.7pt x 578
 .16pt>
 File: images/MobileNet_25e/mobilenet_confusion_matrix_25e.png Graphic file (typ
 e png)
@@ -1022,7 +1022,7 @@ l.367 \newpage
               {C:/Users/Supreme Leader David/AppData/Local/Programs/MiKTeX/font
 s/enc/dvips/lm/lm-mathsy.enc} <./images/MobileNet_25e/mobilenet_accuracy_chart_
 25e.png>]
-<images/MobileNet_35e/mobilenet_accuracy_chart_35e.png, id=220, 722.7pt x 433.6
+<images/MobileNet_35e/mobilenet_accuracy_chart_35e.png, id=240, 722.7pt x 433.6
 2pt>
 File: images/MobileNet_35e/mobilenet_accuracy_chart_35e.png Graphic file (type 
 png)
@@ -1048,7 +1048,7 @@ l.378     \item \textbf
                        {Fear remains challenging:} Even with extended traini...
  <./images/MobileNet_25e/mobilenet_confusion_matrix_25e.png> <./images/MobileNe
 t_35e/mobilenet_accuracy_chart_35e.png>]
-<images/MobileNet_35e/mobilenet_confusion_matrix_35e.png, id=229, 722.7pt x 578
+<images/MobileNet_35e/mobilenet_confusion_matrix_35e.png, id=249, 722.7pt x 578
 .16pt>
 File: images/MobileNet_35e/mobilenet_confusion_matrix_35e.png Graphic file (typ
 e png)
@@ -1065,7 +1065,7 @@ s been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.386 \newpage
                <./images/MobileNet_35e/mobilenet_confusion_matrix_35e.png>]
-<images/MobileNet_3c/mobilenet_accuracy_chart_3c.png, id=236, 722.7pt x 433.62p
+<images/MobileNet_3c/mobilenet_accuracy_chart_3c.png, id=256, 722.7pt x 433.62p
 t>
 File: images/MobileNet_3c/mobilenet_accuracy_chart_3c.png Graphic file (type pn
 g)
@@ -1073,7 +1073,7 @@ g)
 Package pdftex.def Info: images/MobileNet_3c/mobilenet_accuracy_chart_3c.png  u
 sed on input line 391.
 (pdftex.def)             Requested size: 385.02547pt x 231.01509pt.
-<images/MobileNet_3c/mobilenet_confusion_matrix_3c.png, id=237, 722.7pt x 578.1
+<images/MobileNet_3c/mobilenet_confusion_matrix_3c.png, id=257, 722.7pt x 578.1
 6pt>
 File: images/MobileNet_3c/mobilenet_confusion_matrix_3c.png Graphic file (type 
 png)
@@ -1094,46 +1094,147 @@ s been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.405 \newpage
                <./images/MobileNet_3c/mobilenet_accuracy_chart_3c.png>]
+<images/fer2013.png, id=264, 1806.75pt x 380.42125pt>
+File: images/fer2013.png Graphic file (type png)
+<use images/fer2013.png>
+Package pdftex.def Info: images/fer2013.png  used on input line 423.
+(pdftex.def)             Requested size: 385.02547pt x 81.06917pt.
+
 
 [17
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.418 \newpage
-               <./images/MobileNet_3c/mobilenet_confusion_matrix_3c.png>]
+l.426 \subsubsection{Altering the dataset}
+                                           <./images/MobileNet_3c/mobilenet_con
+fusion_matrix_3c.png>]
 
-[18] (ai_systems_portfolio.aux)
+[18
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.437 \subsection{Result Analysis}
+                                   <./images/fer2013.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 439--445
+
+ []
+
+
+
+[19
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.486 
+      ]
+<images/MobileNet_25e/loss_acc(25 epochs).png, id=284, 1084.05pt x 361.35pt>
+File: images/MobileNet_25e/loss_acc(25 epochs).png Graphic file (type png)
+<use images/MobileNet_25e/loss_acc(25 epochs).png>
+Package pdftex.def Info: images/MobileNet_25e/loss_acc(25 epochs).png  used on 
+input line 489.
+(pdftex.def)             Requested size: 326.13744pt x 108.70909pt.
+
+
+[20
+pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.530 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.530 
+       <./images/MobileNet_25e/loss_acc(25 epochs).png>]
+<images/MobileNet_35e/t_v_acc_loss_35_epochs.png, id=292, 883.1394pt x 325.9377
+pt>
+File: images/MobileNet_35e/t_v_acc_loss_35_epochs.png Graphic file (type png)
+<use images/MobileNet_35e/t_v_acc_loss_35_epochs.png>
+Package pdftex.def Info: images/MobileNet_35e/t_v_acc_loss_35_epochs.png  used 
+on input line 533.
+(pdftex.def)             Requested size: 326.13744pt x 120.36627pt.
+<images/MobileNet_3c/loss_acc(3 classes).png, id=293, 883.1394pt x 325.9377pt>
+File: images/MobileNet_3c/loss_acc(3 classes).png Graphic file (type png)
+<use images/MobileNet_3c/loss_acc(3 classes).png>
+Package pdftex.def Info: images/MobileNet_3c/loss_acc(3 classes).png  used on i
+nput line 580.
+(pdftex.def)             Requested size: 326.13744pt x 120.36627pt.
+
+
+[21{C:/Users/Supreme Leader David/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
+/lm/lm-rm.enc}{C:/Users/Supreme Leader David/AppData/Local/Programs/MiKTeX/font
+s/enc/dvips/lm/lm-mathit.enc}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.582 \end{figure}
+                  
+pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.582 \end{figure}
+                   <./images/MobileNet_35e/t_v_acc_loss_35_epochs.png>]
+
+[22
+pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.615 \newpage
+               <./images/MobileNet_3c/loss_acc(3 classes).png>]
+
+[23]
+
+[24] (ai_systems_portfolio.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
  ***********
-Package rerunfilecheck Info: File `ai_systems_portfolio.out' has not changed.
-(rerunfilecheck)             Checksum: B20DAE24DDB33B964212F64BB4D0B1E3;3069.
+
+
+Package rerunfilecheck Warning: File `ai_systems_portfolio.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ai_systems_portfolio.out':
+(rerunfilecheck)             Before: E3F68B50A27BA6AA88584CC10231F63F;3681
+(rerunfilecheck)             After:  F90DD263565B651DAF199FF32D8ED195;3775.
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
 Package logreq Info: Writing requests to 'ai_systems_portfolio.run.xml'.
 \openout1 = `ai_systems_portfolio.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18802 strings out of 469959
- 339551 string characters out of 5462538
- 1253717 words of memory out of 5000000
- 45297 multiletter control sequences out of 15000+600000
+ 18855 strings out of 469959
+ 341065 string characters out of 5462538
+ 1253720 words of memory out of 5000000
+ 45329 multiletter control sequences out of 15000+600000
  677159 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,79p,1244b,5050s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Supreme Leader David/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/lm/lmbx10.pfb><C:/Users/Supreme Leader David/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/lm/lmbx12.pfb><C:/Users/Supreme Leader David/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Supreme Leader David/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Supreme L
-eader David/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/U
-sers/Supreme Leader David/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
-mri12.pfb><C:/Users/Supreme Leader David/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/lm/lmsy10.pfb>
-Output written on ai_systems_portfolio.pdf (20 pages, 602273 bytes).
+ograms/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Supreme Leader David/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Supreme 
+Leader David/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/
+Users/Supreme Leader David/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmr17.pfb><C:/Users/Supreme Leader David/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/lm/lmri12.pfb><C:/Users/Supreme Leader David/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
+Output written on ai_systems_portfolio.pdf (26 pages, 1350153 bytes).
 PDF statistics:
- 317 PDF objects out of 1000 (max. 8388607)
- 78 named destinations out of 1000 (max. 500000)
- 193 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 393 PDF objects out of 1000 (max. 8388607)
+ 97 named destinations out of 1000 (max. 500000)
+ 245 words of extra memory for PDF output out of 10000 (max. 10000000)
 

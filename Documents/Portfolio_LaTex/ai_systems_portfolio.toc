@@ -24,3 +24,9 @@
 \contentsline {subsubsection}{\numberline {6.3.6}Regulatory Alignment}{11}{subsubsection.6.3.6}%
 \contentsline {subsubsection}{\numberline {6.3.7}Conclusion}{12}{subsubsection.6.3.7}%
 \contentsline {subsection}{\numberline {6.4}Fourth Sub Question:}{12}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Apporach}{18}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Picking a dataset}{18}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Altering the dataset}{18}{subsubsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.2}Training the model in Google Colab}{19}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Result Analysis}{19}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Reflection}{23}{section.8}%

@@ -414,6 +414,203 @@ Across all three models, certain trends are consistent:
 
 In summary, the model’s accuracy varies substantially across emotion types, with high performance on expressive emotions and weaker performance on subtle or ambiguous categories. This variation reflects both the limitations of FER2013 and the biological reality that some emotions are inherently harder to recognise.
 
+\section{Apporach}
+
+\subsection{Picking a dataset}
+I choose the FER2013 dataset because it offers a practical and accessible starting point in developing an emotion detection model. Because this dataset is widely used in academic projects, the data is already pre-labeled, easy to load and works well with popular deep-learning libraries, which made the experimentation much faster. Even though the dataset has its limitations (low resolution images and some class imbalance), it still profides a solid base for understanding how facial emotion recognition works. Being the most convenient and beginner-friendly option, I considered that training a model on this dataset, I can obtain a good proof of concept and maybe later on move forward on a much bigger and demographic diverse dataset (eg., AffectNet).
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.85\textwidth]{images/fer2013.png}
+    \caption{Showcase of all the classes in FER2013 dataset}
+\end{figure}
+\subsubsection{Altering the dataset}
+After analysing the confusion matrices and F1-scores of models A and B (7 classes, 25 epochs and 25 epochs), I saw that several classes showed low separability and high misclassification rates ("False Positives"). Emotions such as \emph{fear}, \emph{sad} and \emph{disgust} showed strong overlap, due to the similar features (frowning eyebrows, open mouth, wide open eyes), while \emph{neutral} class overlapped with both positive and negative classes. These patterns show a clear limitation of the FER2013 dataset, where subtle emotions are difficult to classify. \\
+Even after increasing the training time from 25 epochs to 25 epochs, the model still struggled in this area. After analysing the dataset and the project itself, it came to my mind that I did not need to know exactly how the end user felt, but just to now if he is in a bad or good mood. That's where I decided to narrow the classes and make them broader. Thus the emotions were grouped into 3 broader categories:
+\begin{itemize}
+\item \textbf{Positive} class that contained the \emph{happy}, \emph{surprise} classes.
+\item \textbf{Negative} class that containted the \emph{angry}, \emph{sad}, \emph{fear}, \emph{disgust} classes.
+\item \textbf{Neutral} class that contained the \emph{neutral} class.
+\end{itemize}
+\subsection{Training the model in Google Colab}
+Because of the size of the dataset and the limited hardware at my disposal, I choose to train my model on Google Colab. \\
+Google Colab is a hosted Jupyter Notebook service that provides free access to computing resources, including top-tier GPU's (eg., NVIDIA T4 GPU, GOOGLE v5e-1 TPU). Using Google Colab I managed to cut the training time by almost 3 times (1.2 hours on Google Colab vs. 3.5 on my personal GPU). After the training is done, the h5 file (The file that contains the weights and model configuration) is stored in the drive.
+\subsection{Result Analysis}
+
+For the result analysis, the following performance indicators are considered: \\
+\textbullet\ \textbf{Precision} \\
+\textbullet\ \textbf{Recall} \\
+\textbullet\ \textbf{F1-score} \\
+\textbullet\ \textbf{Training/Validation Loss} \\
+\textbullet\ \textbf{Training/Validation Accuracy} \\[6pt]
+
+Across all three models, these metrics provide insight into both the quality of the predictions
+(Classification reports) and the training behaviour
+(learning curves over multiple epochs).  
+The following subsections present the results for each model individually before comparing them.
+
+% ------------------------------------------------------------
+\subsubsection*{Model A: 7 Classes, 25 Epochs}
+
+The first version of the model was trained for 25 epochs on all seven FER2013 emotion categories.
+This configuration provides the baseline for evaluating later improvements.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+\midrule
+angry    & 0.58 & 0.63 & 0.60 \\
+disgust  & 0.57 & 0.55 & 0.57 \\
+fear     & 0.43 & 0.45 & 0.43 \\
+happy    & 0.88 & 0.90 & 0.88 \\
+neutral  & 0.61 & 0.63 & 0.61 \\
+sad      & 0.55 & 0.59 & 0.56 \\
+surprise & 0.75 & 0.78 & 0.75 \\
+\midrule
+\textbf{Accuracy}      & \multicolumn{3}{c}{0.66} \\
+\textbf{Macro Avg.}    & 0.62 & 0.65 & 0.63 \\
+\textbf{Weighted Avg.} & 0.66 & 0.66 & 0.66 \\
+\bottomrule
+\end{tabular}
+\caption{Classification performance for Model A (7 classes, 25 epochs).}
+\end{table}
+
+\subsubsection*{Training Behaviour:}
+The training curves indicate that the model learns steadily, with validation accuracy stabilising around
+0.62--0.65.  
+However, training accuracy fluctuates heavily, suggesting instability caused by the complexity of
+distinguishing seven emotion categories in low-resolution images.  
+Validation loss does not reduce significantly after the midpoint of training, confirming that the model
+reached its learning limit early.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.72\textwidth]{images/MobileNet_25e/loss_acc(25 epochs).png}
+    \caption{Model A — Training and validation accuracy and loss (7 classes, 25 epochs).}
+\end{figure}
+
+These results highlight two key issues:  
+(1) high confusion between negative emotions (angry, fear, sad), and  
+(2) the dominance of the ``happy'' class, which consistently achieves the highest scores.
+
+\vspace{10pt}
+
+% ------------------------------------------------------------
+\subsubsection*{Model B: 7 Classes, 35 Epochs}
+
+Model B extends training to 35 epochs to observe whether longer optimisation improves performance.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+\midrule
+angry    & 0.60 & 0.64 & 0.61 \\
+disgust  & 0.57 & 0.56 & 0.57 \\
+fear     & 0.47 & 0.47 & 0.46 \\
+happy    & 0.88 & 0.89 & 0.88 \\
+neutral  & 0.65 & 0.66 & 0.65 \\
+sad      & 0.58 & 0.60 & 0.59 \\
+surprise & 0.78 & 0.80 & 0.78 \\
+\midrule
+\textbf{Accuracy}      & \multicolumn{3}{c}{0.69} \\
+\textbf{Macro Avg.}    & 0.64 & 0.66 & 0.65 \\
+\textbf{Weighted Avg.} & 0.69 & 0.69 & 0.69 \\
+\bottomrule
+\end{tabular}
+\caption{Classification performance for Model B (7 classes, 35 epochs).}
+\end{table}
+
+\subsubsection*{Training Behaviour:}
+The training curves reveal a much smoother learning process compared to Model A.
+Validation accuracy increases gradually and reaches \(\approx 0.68\), while validation loss decreases
+consistently.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.72\textwidth]{images/MobileNet_35e/t_v_acc_loss_35_epochs.png}
+    \caption{Model B — Training and validation accuracy and loss (7 classes, 35 epochs).}
+\end{figure}
+
+The improvement from 25 to 35 epochs is clear:
+\begin{itemize}
+    \item Negative emotions receive slightly higher F1-scores.
+    \item ``Happy'' remains the strongest and most separable class.
+    \item ``Fear'' continues to be the hardest class to classify, showing chronic overlap with similar emotions.
+\end{itemize}
+
+Although the model improves with more training, the confusion between semantically similar emotions
+remains a limiting factor, illustrating the constraints of FER2013’s uneven and ambiguous labels.
+
+\vspace{10pt}
+
+% ------------------------------------------------------------
+\subsubsection*{Model C: 3 Classes (Positive, Neutral, Negative), 35 Epochs}
+
+To address the difficulty of distinguishing subtle expressions, the final model groups emotions into
+three broader categories. This reduces complexity and mitigates dataset imbalance.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+\midrule
+Negative & 0.81 & 0.88 & 0.84 \\
+Neutral  & 0.71 & 0.57 & 0.63 \\
+Positive & 0.89 & 0.87 & 0.88 \\
+\midrule
+\textbf{Accuracy}      & \multicolumn{3}{c}{0.82} \\
+\textbf{Macro Avg.}    & 0.80 & 0.77 & 0.78 \\
+\textbf{Weighted Avg.} & 0.82 & 0.82 & 0.82 \\
+\bottomrule
+\end{tabular}
+\caption{Classification performance for Model C (3 classes, 35 epochs).}
+\end{table}
+
+\subsubsection*{Training Behaviour:}
+Model C shows the cleanest and most stable training pattern.
+Validation accuracy increases steadily and reaches \(\approx 0.82\), while validation loss decreases
+smoothly.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.72\textwidth]{images/MobileNet_3c/loss_acc(3 classes).png}
+    \caption{Model C — Training and validation accuracy and loss (3 classes, 35 epochs).}
+\end{figure}
+
+The improvement in performance is explained by:
+\begin{itemize}
+    \item Clearer decision boundaries between broad categories.
+    \item Reduction of label ambiguity (e.g., angry vs. sad vs. fear collapse into ``Negative'').
+    \item More stable gradients during training.
+\end{itemize}
+
+Neutral remains the weakest category due to its natural overlap with low-intensity positive and negative expressions.
+
+\vspace{12pt}
+
+% ------------------------------------------------------------
+\subsubsection*{Comparison of All Models}
+
+Overall performance improves significantly across the versions:
+
+\begin{itemize}
+    \item \textbf{Model A (25 epochs, 7 classes):} Shows unstable training and modest accuracy (66\%).  
+    \item \textbf{Model B (35 epochs, 7 classes):} More stable optimisation and improved accuracy (69\%).  
+    \item \textbf{Model C (35 epochs, 3 classes):} Strong generalisation, clean training curves, and highest accuracy (82\%).  
+\end{itemize}
+
+The training curves clearly demonstrate that:
+\begin{itemize}
+    \item Increasing epochs improves performance for the full 7-class model, but only to a limited extent.
+    \item The FER2013 dataset makes fine-grained emotion classification difficult due to ambiguous labels, low image quality, and class imbalance.
+    \item Grouping emotions into broader categories dramatically stabilises training and boosts accuracy.
+\end{itemize}
+
+\section{Reflection}
 
 \newpage
 \printbibliography
