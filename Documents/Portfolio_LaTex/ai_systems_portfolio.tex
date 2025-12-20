@@ -266,8 +266,16 @@ Ethnicity plays a critical role in the reliability of mood detection models. Wit
 
 %=======================================================================
 \subsection{Second Sub Question:}
-\textbf{How does reat-time camera input compare to static images or pre-recorded videos in terms of accuracy and usability}\\\\
-\textbf{WORK IN PROGRESS}
+\textbf{How does reat-time camera input compare to static images or pre-recorded videos in terms of accuracy and usability?}\\\\
+The performance of emotion detection systems differs noticeably on static images, pre-recorded videos and real-time camera input. During the development and testing of the desktop application the differences were clearly observed in both accuracy and usability when using real-time webcam input compared to controlled data, such as pre-recorded videos and images.\\
+When using static images, the emotion detection model achieved the highest accuracy. Static images are usually well-aligned, centered and captured under controlled light conditions. In most of the public datasets, such as FER2013 and AffectNet, facial expressions are exaggerated and clearly labeled, which makes the job for the model much easier. Because of the high-quality frame, there is no motion blur or occlusion and the predictions tend to be more stable.\\
+Pre-recoreded videos tend to be the middle ground between static images and real-time imput. Videos provide multiple frames of the same expression, allowing the model to use more complex algorithms, like majority voting. However, pre-recorded videos are still most of the time captured in controlled environments, often showing clear facial expressions. As a result, while performance is still lower than a static images due to motion blur and lighting inconsistencies, accuracy tends to remain relatively high and consistent.\\
+Real-time camera input introduces several challenges that affect accuracy. In real life, facial expressions are often subtle, incomplete or mixed. While testing the desktop application, it was observed thta the model struggled with detecting mild frustration or subtle anger. These emotions were sometimes misclassified as NEUTRAL rather than NEGATIVE. This is a clear example of why emotion training datasets often do not reflect real life scenarios, because in the datasets, frustration is often showed by wide eyes or exaggerated frowns, but in real life, frustration does not always involve strong facial cues.\\
+Another interesting observation is that this issue occured far less for the POSITIVE class. Positive emotions such as happiness tend to produce clearer and more distinctive facial features, such as smiles or raised cheeks, which are easier to detect in real-time conditions. This resulted in stable and accurate detection for the POSITIVE class.\\
+From an usability perspective, real-time camera input is much more challenging but also more realistic. While static images and pre-recorded videos are useful for training and benchmarking, they do not reflect the real world situations. Real-time input captures the face in different light conditions, has to take into account head movements, partial occlusions and spontaneous expressions. All of these factors reduce the classification accuracy but increse external validity. In other words, real-time performance is a more meaningful indicator of how the system is going to perform in practical applications.\\
+\subsubsection*{Conclusion}
+Overall, static images provide the highest accuracy but the lowest realism, pre-recorded videos offer a balance between accuracy and temporal context, and real-time camera input presents the lowest accuracy due to subtle and natural expressions but the highest usability in real-world scenarios. The observed misclassification of subtle negative emotions as neutral highlights an important limitation of emotion recognition models trained on staged datasets and reinforces the decision to use broader emotion categories in the final application.
+
 %=======================================================================
 \subsection{Third Sub Question:}
 \textbf{What ethical considerations need to be taken into account when developing and applying facial emotion recognition systems?}
@@ -610,7 +618,68 @@ The training curves clearly demonstrate that:
     \item Grouping emotions into broader categories dramatically stabilises training and boosts accuracy.
 \end{itemize}
 
+\section{Desktop Application: Study Buddy}
+
+\subsection{Application Overview}
+To demonstrate the practical applicability of the emotion detection model (Model C), I developed a lightweight desktop application. The goal of the application is to support healthy studying habits by combining time management with context-aware mood feedback. The application runs in the background as a system tray tool and assists the user during study sessions by suggesting breaks or providing motivational feedback based on how the user is doing.
+\subsection{Application Design}
+The application is designed as a system tray application using PyQt6. Instead of a traditional windiw-based interface, I opted for a tray application to minimize distractions and and reduce fatigue when switching tabs on your personal computer. If the user disables the camera, the application does now run interference anymore and acts only as a timer, giving alerts only when the study session is about to end. \\
+Through the tray menu, the user can:
+\begin{itemize}
+\item Start, pause, resume or stop the study session.
+\item Select predefined session durations (25, 45, 60, 90, 120 minutes).
+\item Enter a custom session duration.
+\item Enable or disable the camera.
+\item Exit the application.
+\end{itemize}
+The session status and the remaining time are displayed dynamically in the tray tooltip and menu, giving users quick access to checking their progress without interrupting their workflow.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{images/app_preview.png}
+    \caption{Preview of the application menu from the system tray}
+\end{figure}
+
+\subsection{Study Session and Time Management}
+At the core, the applicaiton is a study session controller that tracks the time that you study. The application sens time-based notification, letting the user know the study session is comming to an end (60, 30, 10 minutes remaining). This timer functionality suports the application's primary purpose: helping the user structure their study time and avoid burnout and fatigue.
+
+\subsection{Mood Detection Pipeline}
+When the camera is enabled, the application is able to scan your face periodically and perform short emotion scans. These scans occur once per minute and run in the background thread to ensure the user interface remains responsive.
+
+The emotion detection pipeline consists of the following steps:
+\begin{itemize}
+\item Webcam input: The frames are captured using OpenCV
+\item Face detection: A Haar cascade classifier is used to locate a face in each frame
+\item Preprocessing: The images captured from step one are resized to 224x224 pixels and normalized
+\item Model Interference: The preprocessed image is passed to the trained MobileNet model (Model C)
+\item Prediction Stabilisation: Multiple predictions are collected during a short scan and combined using a majority-vote strategy to reduce single-frame missclassifications.
+\end{itemize}
+ 
+\subsection{Mood-Based Decision Logic}
+The mood-based decision logic is responsible for deciding when the application should interact with the user. Instead of responding immediately to every emotion detected by the camera, this logic evaluates the moods collected from the camera over time and determines whether the application should prompt a notification or not. This apporach is the most realistic one because facial expressions can change quickly and single detections will not represent how the user is feeling during a longer study session.\\
+Each time the application performs a scan, the camera stays open approximately 4 second, capturing multiple frames to produce a final mood classification. This classification can be neutral, positive or negative and represents the dominant facial expression during that scan. After a mood is produced, it is stored together with a timestamp at which it was detected. The results are kept in the RAM, representing the user's most recent emotional state. Only results from a predefined period are stored, while the older entries are automatically removed. This ensures that decisions are always based on current information and help keep the application as lightweight as possible.\\
+Once a new mood had been added to the history, the decision logic analyses the stored data by counting how often each mood occured within the period. The system looks for patterns that indicate a consistent emotional state rather than reacting to a single negative result. For example, if an user is in a positive state until the scan, but then his facial expression changes suddenly during the scan and gets classified as a negative mood, that is considered a misclassification and the app should not tell the user to take a break. This way the logic looks for repeated negative detections within a period to notify the user to take a break.\\
+A break notification is triggered only when two conditions are met:
+\begin{itemize}
+\item The most recent mood detection must be negative, ensuring that the user is experiencing difficulty.
+\item The number of negative mood detections within the period must reached the predefined threshold (eg., 5 negative detections in a row).
+\end{itemize} 
+With these 2 conditions combined, we avoid spamming the user with notifications by waiting until there is sufficient evidence that a break may be needed.\\
+To prevent the application from interrupting the user too frequently, the decision logic has a cooldown mechanism. After a notification is shown, the system temporarily disables further notifications of the same type. During this cooldown period, new mood results are still recorded, but no additional messages are displayed. This design choice helps maintain a supportive and non-intrusive user experience.\\
+
+When the recent mood history consists mainly of neutral or positive detections and no break suggestion has been triggered recently, the system may display a motivational message instead. These messages are intended to encourage the user to continue their study session and provide positive reinforcement without implying that the user is struggling.
+\subsection{Privacy-Aware Design}
+All image processing and emotion interference occur locally on the user's device. No images, video frames or personal information that may lead to identifying an individual are stored or transmitted. The webcam feature if fully opt-in and users can disable mood detection at any time via the tray menu.\\
+The design alignes with GDPR and EU AI Act principles such as data minimisation and purpose limitation.
+\subsection{Limitations}
+While the application successfully demonstrates the integration of emotion recognition into a practical system, several limitations remain. The face detection relies on a Haar cascade, which may struggle under poor lighting conditions or with non-frontal faces. Additionally, the emotion model is trained on FER2013, which limits its robustness across diverse demographics. Finally, the application provides supportive feedback only and is not suitable for high-stakes or clinical use.
+
 \section{Reflection}
+When I started this project, I viewed creating a model as straightforward as feeding the dataset to the model and then giving it time to train. I assumed that if I give the FER2013 dataset to the Neural Network that I coded, my model will learn to "see" the emotions as a human would. At first, when i saw the accuracy from the "Happy" class being as high as 87\%, I thought that the model is perfect but just needs a little more time to train. After giving it extra 10 epochs, I saw that the model started to plateau, meaning that the loss function started flattening out, in normal words the model stopped learning. No matter what I did the "Fear" class just would not get a higher precision than 43\%. \\
+That was the breaking point where I considered that maybe the model was not the problem and took a step back to look through the images that the model trains on. I decided to quickly run through the dataset to see how many images I have per class to check for a potential class imbalance. After doing so, not only did it confirm my suspicions, I also for some classes could not tell myself what class they were. Seeing this, a genius ideea sparked in my mind. I remembered from Data Mining classes that in one lesson we talked about graphs and how they give us insight in what happens during the training, so I decided to generate a \textbf{Confusion Matrix}, and that was the best decision for this project. I saw that the Negative classes got often confused with each other, for example the "Fear" class was getting confused with the "Sad" class 216 times.\\
+That was the moment when I realized that my model was not dumb, it was just fighting to undestand low resolution images with very similar features. That is when I stopped thinking as a "Software Engineer", but more like a "Data Scientist". I realized that trying to make the model accurately detect the 7 classes was just a losing battle. I found myself again taking a step back and returning to the initial project ideea. The point of my model was to detect if the person using my application was not feeling well and needed a break from studying, not to detect how he was feeling. The I tried to group all of the 7 classes into 3 simple classes: Negative, Positive and Neutral. That idea was the breaking point for my project. I managed to get a precision of 89\% on "Positive" classes, 71\% on "Neutral" classes and 81\% on "Negative". After going throught the "Neutral" photos to see why I got a relatively low Recall (57\%) compared to the other classes, I saw that there are some cases where the images were really similar. So it was not a model problem, it was a dataset problem. After reaching an acceptable performance on the model, I started my research on the legal part of Ai and all the ethical problems that emotion detection comes with.\\
+At the start of this semster, I had a meeting with my project coach, Mr. Frank van Gennip. In that meeting we discussed about potential research subquestions. That meeting opened my mind to a layer of AI that I had completely neglected: the legal and the ethical part. Until that meeting I saw training a model as a technical challange. Mr. van Gennip helped me realize that AI is also a legal and social responsibility. We discusses that an AI must also adhere to frameworks like GDPR, IEE standards for ethical design and also the EU AI Act to avoid any potential problems with the law. I also learned that emotion recognition systems are often classified as "high risk" because they work with biometric data.\\
+This new mindset that my coach helped me create led me to another critical subquestion: \textbf{How does a person's ethnicity affect the model?} Looking back to my earlier realization about the data quality, I looked again at the dataset, but from an ethical perspective rather than a statistical one. The FER2013 dataset, like many open source datasets, had problems with demographic imbalances. That led to another problem, because if the model is trained on predominantly white faces, the features that it learns will not generalize well on other ethinicites. This is a real problem because I realized that my model was algorithmically biased. A model that works well for one demographic but fails for another violates the fairness principes written in the IEEE and EU AI Act.\\
+To sum up my journey throughout this minor, I realized that I started as a software engineer that was looking only for high precision and recall percentages. But in the end I ended up seeing over the lines of code and realize that code cannot ignore the law. Moving forward, I learnt that building an AI requires not only techincal skills, but also empathy to understand the data and adhere to the legal frameworks to avoid legal problems.
 
 \newpage
 \printbibliography

@@ -15,18 +15,26 @@
 \contentsline {section}{\numberline {6}Theoretical Learning Objectives}{8}{section.6}%
 \contentsline {subsection}{\numberline {6.1}First Sub Question:}{8}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Second Sub Question:}{10}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Third Sub Question:}{10}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Privacy and Data Protection}{10}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2}User Consent and Transparency}{10}{subsubsection.6.3.2}%
-\contentsline {subsubsection}{\numberline {6.3.3}Data Storage and Security}{11}{subsubsection.6.3.3}%
-\contentsline {subsubsection}{\numberline {6.3.4}AI Bias and Fairness}{11}{subsubsection.6.3.4}%
-\contentsline {subsubsection}{\numberline {6.3.5}Ethical Use and Context}{11}{subsubsection.6.3.5}%
-\contentsline {subsubsection}{\numberline {6.3.6}Regulatory Alignment}{11}{subsubsection.6.3.6}%
-\contentsline {subsubsection}{\numberline {6.3.7}Conclusion}{12}{subsubsection.6.3.7}%
-\contentsline {subsection}{\numberline {6.4}Fourth Sub Question:}{12}{subsection.6.4}%
-\contentsline {section}{\numberline {7}Apporach}{18}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Picking a dataset}{18}{subsection.7.1}%
-\contentsline {subsubsection}{\numberline {7.1.1}Altering the dataset}{18}{subsubsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.2}Training the model in Google Colab}{19}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Result Analysis}{19}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Reflection}{23}{section.8}%
+\contentsline {subsection}{\numberline {6.3}Third Sub Question:}{11}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Privacy and Data Protection}{11}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}User Consent and Transparency}{11}{subsubsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3}Data Storage and Security}{12}{subsubsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.4}AI Bias and Fairness}{12}{subsubsection.6.3.4}%
+\contentsline {subsubsection}{\numberline {6.3.5}Ethical Use and Context}{12}{subsubsection.6.3.5}%
+\contentsline {subsubsection}{\numberline {6.3.6}Regulatory Alignment}{13}{subsubsection.6.3.6}%
+\contentsline {subsubsection}{\numberline {6.3.7}Conclusion}{13}{subsubsection.6.3.7}%
+\contentsline {subsection}{\numberline {6.4}Fourth Sub Question:}{14}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Apporach}{19}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Picking a dataset}{19}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Altering the dataset}{20}{subsubsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.2}Training the model in Google Colab}{20}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Result Analysis}{20}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Desktop Application: Study Buddy}{24}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Application Overview}{24}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Application Design}{24}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Study Session and Time Management}{25}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Mood Detection Pipeline}{26}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Mood-Based Decision Logic}{26}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Privacy-Aware Design}{27}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}Limitations}{27}{subsection.8.7}%
+\contentsline {section}{\numberline {9}Reflection}{27}{section.9}%
